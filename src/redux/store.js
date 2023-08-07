@@ -3,9 +3,9 @@ import {
   configureStore,
   getDefaultMiddleware,
 } from '@reduxjs/toolkit';
-import todoReducer from './slices/todo';
-import uiReducer from './slices/ui';
-import userReducer from './slices/user';
+import todoReducer from './state/todo';
+import uiReducer from './state/ui';
+import userReducer from './state/user';
 import storage from 'reduxjs-toolkit-persist/lib/storage';
 import {
   persistReducer,

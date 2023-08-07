@@ -1,7 +1,7 @@
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
-import { toggleDarkMode } from './redux/slices/ui';
-import { fetch_ip_info } from './redux/slices/user';
+import { toggleDarkMode } from './redux/state/ui';
+import { fetch_ip_info } from './redux/state/user';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 

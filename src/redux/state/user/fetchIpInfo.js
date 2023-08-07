@@ -9,7 +9,7 @@ export default async function () {
     return { ip: '', location: '', isp: '' };
   } else {
     // get user's location
-    const response = await fetch(`http://ip-api.com/json/${ip}`);
+    const response = await fetch(`https://ip-api.com/json/${ip}`);
     const info = await response.json();
     return {
       ip,
