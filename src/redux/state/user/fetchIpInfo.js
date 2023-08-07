@@ -9,7 +9,10 @@ export default async function () {
     return { ip: '', location: '', isp: '' };
   } else {
     // get user's location
-    const response = await fetch(`https://ip-api.com/json/${ip}`);
+    const url =
+      'https://corsproxy.io/?' +
+      encodeURIComponent(`http://ip-api.com/json/${ip}`);
+    const response = await fetch(url);
     const info = await response.json();
     return {
       ip,
