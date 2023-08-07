@@ -1,4 +1,4 @@
-import Task from './components/Task';
+import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import { toggleDarkMode } from './redux/slices/ui';
 import { fetch_ip_info } from './redux/slices/user';
@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="" data-component="App">
-      <header className="px-6 py-3 text-zinc-400 dark:text-slate-500">
+      <header className="px-6 py-3 uui-subtle">
         {/* user state */}
         <div className="flex justify-between">
           <span>
@@ -41,9 +41,8 @@ const App = () => {
       </header>
 
       {/* todo state */}
-      <div className="rounded m-6 p-6 drop-shadow-lg bg-zinc-300 dark:bg-slate-600">
-        <h1 className="">ToDo App</h1>
-        <Task />
+      <div className="m-6 p-6 drop-shadow-lg uui-card">
+        <TaskForm />
         <TaskList />
       </div>
     </div>

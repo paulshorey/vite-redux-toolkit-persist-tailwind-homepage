@@ -10,19 +10,16 @@ const TaskList = () => {
   }
   return (
     <div className="" data-component="TaskList">
-      <div className="">
-        <h3>Your tasks:</h3>
-        <ul className="">
-          {tasks.map((task) => (
-            <li className="task" key={task.id}>
-              {task.text}
-              <button className="" onClick={() => deleteTask(task.id)}>
-                delete
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="">
+        {tasks.map((task) => (
+          <li className="task" key={task.id}>
+            {task.text}
+            <button className="" onClick={() => deleteTask(task.id)}>
+              delete
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
